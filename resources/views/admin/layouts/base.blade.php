@@ -190,16 +190,16 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-{{--                                <a href="{{ route('categories.index') }}" class="nav-link">--}}
-{{--                                    <i class="far fa-circle nav-icon"></i>--}}
-{{--                                    <p>Список категорий</p>--}}
-{{--                                </a>--}}
+                                <a href="{{ route('categories.index') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Список категорий</p>
+                                </a>
                             </li>
                             <li class="nav-item">
-{{--                                <a href="{{ route('categories.create') }}" class="nav-link">--}}
-{{--                                    <i class="far fa-circle nav-icon"></i>--}}
-{{--                                    <p>Новая категория</p>--}}
-{{--                                </a>--}}
+                                <a href="{{ route('categories.create') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Новая категория</p>
+                                </a>
                             </li>
                         </ul>
                     </li>
