@@ -8,7 +8,19 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 {{--    <link rel="stylesheet" href="{{ asset('public/assets/admin/css/admin.css') }}">--}}
-    @vite(['resources/css/app.css', 'resources/assets/admin/css/admin.css', 'resources/js/app.js', 'resources/assets/admin/js/admin.js'])
+    @vite([
+                'resources/css/app.css',
+                'resources/assets/admin/css/admin.css',
+                'resources/assets/admin/plugins/select2/css/select2.min.css',
+                'resources/assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css',
+                'resources/js/app.js',
+                'resources/assets/admin/plugins/jquery/jquery.min.js',
+                'resources/assets/admin/plugins/bootstrap/js/bootstrap.bundle.min.js',
+                'resources/assets/admin/js/adminlte.min.js',
+                'resources/assets/admin/js/demo.js',
+                'resources/assets/admin/js/admin.js',
+                'resources/assets/admin/plugins/select2/js/select2.full.js'
+            ])
     <style>
         .ck-editor__editable_inline {
             min-height: 300px;
@@ -214,16 +226,16 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-{{--                                <a href="{{ route('tags.index') }}" class="nav-link">--}}
-{{--                                    <i class="far fa-circle nav-icon"></i>--}}
-{{--                                    <p>Список тегов</p>--}}
-{{--                                </a>--}}
+                                <a href="{{ route('tags.index') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Список тегов</p>
+                                </a>
                             </li>
                             <li class="nav-item">
-{{--                                <a href="{{ route('tags.create') }}" class="nav-link">--}}
-{{--                                    <i class="far fa-circle nav-icon"></i>--}}
-{{--                                    <p>Новый тег</p>--}}
-{{--                                </a>--}}
+                                <a href="{{ route('tags.create') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Новый тег</p>
+                                </a>
                             </li>
                         </ul>
                     </li>
@@ -238,16 +250,16 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-{{--                                <a href="{{ route('posts.index') }}" class="nav-link">--}}
-{{--                                    <i class="far fa-circle nav-icon"></i>--}}
-{{--                                    <p>Список статей</p>--}}
-{{--                                </a>--}}
+                                <a href="{{ route('posts.index') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Список статей</p>
+                                </a>
                             </li>
                             <li class="nav-item">
-{{--                                <a href="{{ route('posts.create') }}" class="nav-link">--}}
-{{--                                    <i class="far fa-circle nav-icon"></i>--}}
-{{--                                    <p>Новая статья</p>--}}
-{{--                                </a>--}}
+                                <a href="{{ route('posts.create') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Новая статья</p>
+                                </a>
                             </li>
                         </ul>
                     </li>

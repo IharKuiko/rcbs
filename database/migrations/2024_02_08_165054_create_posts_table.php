@@ -15,12 +15,11 @@ return new class extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('slug')->unique();
-            $table->mediumText('description');
-            $table->text('content');
+            $table->text('description');
+            $table->mediumText('content');
             $table->integer('category_id')->unsigned();
             $table->integer('views')->unsigned()->default(0);
             $table->string('thumbnail')->nullable();
-            $table->string('alt');
             $table->boolean('is_published')->nullable()->default(true);
             $table->timestamps();
         });
