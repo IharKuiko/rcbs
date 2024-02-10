@@ -266,6 +266,30 @@
 
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-archive"></i>
+                            <p>
+                                Категории ссылок
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('link_categories.index') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Список категорий</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('link_categories.create') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Новая категория</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-edit"></i>
                             <p>
                                 Ссылки
@@ -274,16 +298,16 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-{{--                                <a href="{{ route('links.index') }}" class="nav-link">--}}
-{{--                                    <i class="far fa-circle nav-icon"></i>--}}
-{{--                                    <p>Список ссылки</p>--}}
-{{--                                </a>--}}
+                                <a href="{{ route('links.index') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Список ссылки</p>
+                                </a>
                             </li>
                             <li class="nav-item">
-{{--                                <a href="{{ route('links.create') }}" class="nav-link">--}}
-{{--                                    <i class="far fa-circle nav-icon"></i>--}}
-{{--                                    <p>Новая ссылка</p>--}}
-{{--                                </a>--}}
+                                <a href="{{ route('links.create') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Новая ссылка</p>
+                                </a>
                             </li>
                         </ul>
                     </li>
