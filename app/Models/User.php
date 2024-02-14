@@ -42,4 +42,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function getAvatar() {
+        if (!$this->avatar) {
+            return asset("avatar_male.jpeg");
+        }
+//        return asset("no-image.jpeg");
+//        return 'OkeY';
+//        return Storage::url("app/{$this->thumbnail}");
+        return asset("{$this->avatar}");
+    }
 }

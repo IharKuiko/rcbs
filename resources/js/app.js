@@ -1,6 +1,7 @@
 import './bootstrap';
 
-import.meta.glob(
-    '../assets/admin/img/**',
-    // '../assets/admin/webfonts/**'
-);
+import Alpine from 'alpinejs';
+
+window.Alpine = Alpine;
+
+Alpine.start();
