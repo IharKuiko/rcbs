@@ -4,11 +4,16 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
+use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 use Illuminate\View\View;
+use Laravel\Socialite\Facades\Socialite;
+
 
 class AuthenticatedSessionController extends Controller
 {
@@ -47,5 +52,37 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/');
+    }
+
+    public function redirectToProvider($provider)
+    {
+
+        return Socialite::driver($provider)->redirect();
+
+    }
+
+    public function handleProviderCallback($provider)
+    {
+
+        $user = Socialite::driver($provider)->user();
+
+
+
+        $user = User::firstOrCreate([
+
+            'email' => $user->getEmail(),
+
+        ], [
+
+            'name' => $user->getName(),
+
+            'password' => Hash::make(Str::random(20)),
+
+        ]);
+
+        Auth::login($user);
+
+        return redirect(RouteServiceProvider::HOME);
+
     }
 }

@@ -6,6 +6,8 @@ use App\Http\Controllers\Admin\LinkController;
 use App\Http\Controllers\Admin\MainController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -42,6 +44,18 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::resource('/tags', TagController::class);
     Route::resource('/posts', PostController::class);
 });
+
+// Socialite Login
+
+Route::get('/login/{provider}', [AuthenticatedSessionController::class, 'redirectToProvider'])->name('login.provider');
+
+Route::get('/login/{provider}/callback', [AuthenticatedSessionController::class, 'handleProviderCallback']);
+
+// Socialite Registration
+
+Route::get('/register/{provider}', [RegisteredUserController::class, 'redirectToProvider'])->name('register.provider');
+
+Route::get('/register/{provider}/callback', [RegisteredUserController::class, 'handleProviderCallback']);
 
 
 require __DIR__.'/auth.php';
