@@ -111,7 +111,7 @@ class ResourceType
     }
 
     /**
-     * Returns the resource type hash.
+     * Returns the resources type hash.
      *
      * @return string hash string
      */

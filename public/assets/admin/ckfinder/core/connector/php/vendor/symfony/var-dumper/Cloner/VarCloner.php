@@ -31,7 +31,7 @@ class VarCloner extends AbstractCloner
         $hardRefs = [];                 // Map of original zval ids to stub objects
         $objRefs = [];                  // Map of original object handles to their stub object counterpart
         $objects = [];                  // Keep a ref to objects to ensure their handle cannot be reused while cloning
-        $resRefs = [];                  // Map of original resource handles to their stub object counterpart
+        $resRefs = [];                  // Map of original resources handles to their stub object counterpart
         $values = [];                   // Map of stub objects' ids to original values
         $maxItems = $this->maxItems;
         $maxString = $this->maxString;
@@ -193,7 +193,7 @@ class VarCloner extends AbstractCloner
                         }
                         break;
 
-                    default: // resource
+                    default: // resources
                         if (empty($resRefs[$h = (int) $v])) {
                             $stub = new Stub();
                             $stub->type = Stub::TYPE_RESOURCE;

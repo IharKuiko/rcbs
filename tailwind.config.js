@@ -11,8 +11,17 @@ export default {
 
     theme: {
         extend: {
+            gridTemplateRows: {
+                'layout': 'auto 1fr auto'
+            },
+            colors: {
+                'gradient1': '#03535e',
+                'gradient2': '#2a926c',
+                'textcol': '#03535e',
+            },
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                // sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Roboto', 'sans-serif'],
             },
         },
     },

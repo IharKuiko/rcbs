@@ -113,7 +113,7 @@ interface AwsClientInterface
     public function getHandlerList();
 
     /**
-     * Get a resource iterator for the specified operation.
+     * Get a resources iterator for the specified operation.
      *
      * @param string $name Name of the iterator to retrieve.
      * @param array  $args Command arguments to use with each command.
@@ -135,7 +135,7 @@ interface AwsClientInterface
     public function getPaginator($name, array $args = []);
 
     /**
-     * Wait until a resource is in a particular state.
+     * Wait until a resources is in a particular state.
      *
      * @param string|callable $name Name of the waiter that defines the wait
      *                              configuration and conditions.
@@ -149,7 +149,7 @@ interface AwsClientInterface
     public function waitUntil($name, array $args = []);
 
     /**
-     * Get a waiter that waits until a resource is in a particular state.
+     * Get a waiter that waits until a resources is in a particular state.
      *
      * Retrieving a waiter can be useful when you wish to wait asynchronously:
      *

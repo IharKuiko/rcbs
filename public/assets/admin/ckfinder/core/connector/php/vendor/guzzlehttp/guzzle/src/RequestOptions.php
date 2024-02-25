@@ -43,7 +43,7 @@ final class RequestOptions
     const AUTH = 'auth';
 
     /**
-     * body: (resource|string|null|int|float|StreamInterface|callable|\Iterator)
+     * body: (resources|string|null|int|float|StreamInterface|callable|\Iterator)
      * Body to send in the request.
      */
     const BODY = 'body';
@@ -74,7 +74,7 @@ final class RequestOptions
     const CONNECT_TIMEOUT = 'connect_timeout';
 
     /**
-     * debug: (bool|resource) Set to true or set to a PHP stream returned by
+     * debug: (bool|resources) Set to true or set to a PHP stream returned by
      * fopen()  enable debug output with the HTTP handler used to send a
      * request.
      */
@@ -150,7 +150,7 @@ final class RequestOptions
     /**
      * multipart: (array) Array of associative arrays, each containing a
      * required "name" key mapping to the form field, name, a required
-     * "contents" key mapping to a StreamInterface|resource|string, an
+     * "contents" key mapping to a StreamInterface|resources|string, an
      * optional "headers" associative array of custom headers, and an
      * optional "filename" key mapping to a string to send as the filename in
      * the part. If no "filename" key is present, then no "filename" attribute
@@ -201,7 +201,7 @@ final class RequestOptions
     const QUERY = 'query';
 
     /**
-     * sink: (resource|string|StreamInterface) Where the data of the
+     * sink: (resources|string|StreamInterface) Where the data of the
      * response is written to. Defaults to a PHP temp stream. Providing a
      * string will write data to a file by the given name.
      */

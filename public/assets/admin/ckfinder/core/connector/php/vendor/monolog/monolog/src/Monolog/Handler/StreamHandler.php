@@ -15,7 +15,7 @@ use Monolog\Logger;
 use Monolog\Utils;
 
 /**
- * Stores to any stream resource
+ * Stores to any stream resources
  *
  * Can be used to store into php://stderr, remote and local files, etc.
  *
@@ -31,14 +31,14 @@ class StreamHandler extends AbstractProcessingHandler
     private $dirCreated;
 
     /**
-     * @param resource|string $stream
+     * @param resources|string $stream
      * @param int             $level          The minimum logging level at which this handler will be triggered
      * @param bool            $bubble         Whether the messages that are handled can bubble up the stack or not
      * @param int|null        $filePermission Optional file permissions (default (0644) are only for owner read/write)
      * @param bool            $useLocking     Try to lock log file before doing any writes
      *
      * @throws \Exception                If a missing directory is not buildable
-     * @throws \InvalidArgumentException If stream is not a resource or string
+     * @throws \InvalidArgumentException If stream is not a resources or string
      */
     public function __construct($stream, $level = Logger::DEBUG, $bubble = true, $filePermission = null, $useLocking = false)
     {
@@ -48,7 +48,7 @@ class StreamHandler extends AbstractProcessingHandler
         } elseif (is_string($stream)) {
             $this->url = Utils::canonicalizePath($stream);
         } else {
-            throw new \InvalidArgumentException('A stream must either be a resource or a string.');
+            throw new \InvalidArgumentException('A stream must either be a resources or a string.');
         }
 
         $this->filePermission = $filePermission;
@@ -78,7 +78,7 @@ class StreamHandler extends AbstractProcessingHandler
     }
 
     /**
-     * Return the stream URL if it was configured with a URL and not an active resource
+     * Return the stream URL if it was configured with a URL and not an active resources
      *
      * @return string|null
      */

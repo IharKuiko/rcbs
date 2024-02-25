@@ -273,7 +273,7 @@ class Utils
     }
 
     /**
-     * Replaces double extensions disallowed for the resource type.
+     * Replaces double extensions disallowed for the resources type.
      *
      * @param string $fileName
      *

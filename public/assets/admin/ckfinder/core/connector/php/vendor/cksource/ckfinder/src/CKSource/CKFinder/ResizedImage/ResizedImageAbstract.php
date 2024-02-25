@@ -23,7 +23,7 @@ use CKSource\CKFinder\ResourceType\ResourceType;
 abstract class ResizedImageAbstract
 {
     /**
-     * The source file resource type object.
+     * The source file resources type object.
      *
      * @var ResourceType
      */
@@ -119,7 +119,7 @@ abstract class ResizedImageAbstract
     }
 
     /**
-     * Returns the resized image resource type.
+     * Returns the resized image resources type.
      *
      * @return ResourceType
      */

@@ -53,7 +53,7 @@
                                                     <td>{{ $link->name }}</td>
                                                     <td>{{ $link->is_published ? 'Да' : 'Нет'}}</td>
                                                     <td>{{ $link->category->title }}</td>
-                                                    <td><img src="{{ $link->getImage() }}" alt="{{ $link->name }}"></td>
+                                                    <td><img style="width: 192px;" class="w-max-10" src="{{ $link->getImage() }}" alt="{{ $link->name }}"></td>
 {{--                                                    <td>{{ $link->link }}</td>--}}
                                                     <td>{{ $link->created_at }}</td>
                                                     <td>

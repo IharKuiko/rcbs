@@ -62,7 +62,7 @@ class ResizedImage extends ResizedImageAbstract
 
     /**
      * @param ResizedImageRepository $resizedImageRepository Resized image repository object
-     * @param ResourceType           $sourceFileResourceType Source image file resource type
+     * @param ResourceType           $sourceFileResourceType Source image file resources type
      * @param string                 $sourceFileDir          Resource type relative directory path
      * @param string                 $sourceFileName         Source image filename
      * @param int                    $requestedWidth         Requested width

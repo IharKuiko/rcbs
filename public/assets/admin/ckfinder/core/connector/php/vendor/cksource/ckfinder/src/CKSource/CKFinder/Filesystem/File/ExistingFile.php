@@ -25,12 +25,12 @@ use CKSource\CKFinder\ResourceType\ResourceType;
  * The ExistingFile class.
  *
  * Represents a file that already exists in CKFinder and can be
- * pointed using the resource type, path and file name.
+ * pointed using the resources type, path and file name.
  */
 abstract class ExistingFile extends File
 {
     /**
-     * File resource type.
+     * File resources type.
      *
      * @var ResourceType
      */
@@ -72,7 +72,7 @@ abstract class ExistingFile extends File
     }
 
     /**
-     * Returns backend-relative folder path (i.e. a path with a prepended resource type directory).
+     * Returns backend-relative folder path (i.e. a path with a prepended resources type directory).
      *
      * @return string backend-relative path
      */
@@ -102,7 +102,7 @@ abstract class ExistingFile extends File
     }
 
     /**
-     * Returns the resource type of the file.
+     * Returns the resources type of the file.
      *
      * @return ResourceType
      */
@@ -112,7 +112,7 @@ abstract class ExistingFile extends File
     }
 
     /**
-     * Checks if the current file has an extension allowed in its resource type.
+     * Checks if the current file has an extension allowed in its resources type.
      *
      * @return bool `true` if the file has an allowed exception
      */
@@ -205,7 +205,7 @@ abstract class ExistingFile extends File
         $contentsSize = \strlen($contents);
 
         if ($maxSize && $contentsSize > $maxSize) {
-            throw new InvalidUploadException('New file contents is too big for resource type limit', Error::UPLOADED_TOO_BIG);
+            throw new InvalidUploadException('New file contents is too big for resources type limit', Error::UPLOADED_TOO_BIG);
         }
 
         $saved = $this->resourceType->getBackend()->put($filePath, $contents);

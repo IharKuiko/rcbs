@@ -261,7 +261,7 @@ class HttpKernel implements HttpKernelInterface, TerminableInterface
         }
 
         if (\is_resource($var)) {
-            return sprintf('a resource (%s)', get_resource_type($var));
+            return sprintf('a resources (%s)', get_resource_type($var));
         }
 
         if (null === $var) {

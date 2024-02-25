@@ -248,7 +248,7 @@ class ResizedImageRepository
     /**
      * Returns a list of resized images generated for a given file.
      *
-     * @param ResourceType $sourceFileResourceType source file resource type
+     * @param ResourceType $sourceFileResourceType source file resources type
      * @param string       $sourceFilePath         source file backend-relative path
      * @param string       $sourceFileName         source file name
      * @param array        $filterSizes            array containing names of sizes defined

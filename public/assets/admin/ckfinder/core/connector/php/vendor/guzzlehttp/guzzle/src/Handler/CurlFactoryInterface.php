@@ -6,7 +6,7 @@ use Psr\Http\Message\RequestInterface;
 interface CurlFactoryInterface
 {
     /**
-     * Creates a cURL handle resource.
+     * Creates a cURL handle resources.
      *
      * @param RequestInterface $request Request
      * @param array            $options Transfer options

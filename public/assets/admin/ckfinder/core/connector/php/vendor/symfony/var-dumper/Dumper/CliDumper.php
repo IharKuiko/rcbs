@@ -294,7 +294,7 @@ class CliDumper extends AbstractDumper
         if (Cursor::HASH_OBJECT === $type) {
             $prefix = $class && 'stdClass' !== $class ? $this->style('note', $class, $attr).(empty($attr['cut_hash']) ? ' {' : '') : '{';
         } elseif (Cursor::HASH_RESOURCE === $type) {
-            $prefix = $this->style('note', $class.' resource', $attr).($hasChild ? ' {' : ' ');
+            $prefix = $this->style('note', $class.' resources', $attr).($hasChild ? ' {' : ' ');
         } else {
             $prefix = $class && !(self::DUMP_LIGHT_ARRAY & $this->flags) ? $this->style('note', 'array:'.$class).' [' : '[';
         }

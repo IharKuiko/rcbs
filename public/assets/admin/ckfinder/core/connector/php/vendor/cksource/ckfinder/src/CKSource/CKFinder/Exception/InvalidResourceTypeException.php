@@ -17,9 +17,9 @@ namespace CKSource\CKFinder\Exception;
 use CKSource\CKFinder\Error;
 
 /**
- * The "invalid resource type" exception class.
+ * The "invalid resources type" exception class.
  *
- * Thrown when a request is trying to access an invalid resource type (e.g. one that does not exist).
+ * Thrown when a request is trying to access an invalid resources type (e.g. one that does not exist).
  */
 class InvalidResourceTypeException extends CKFinderException
 {

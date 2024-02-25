@@ -20,7 +20,7 @@ use CKSource\CKFinder\Error;
  * The "invalid extension" exception class.
  *
  * Thrown when a file has an invalid extension, for example if the extension
- * is not allowed for the resource type.
+ * is not allowed for the resources type.
  */
 class InvalidExtensionException extends CKFinderException
 {

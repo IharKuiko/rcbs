@@ -229,7 +229,7 @@ class EditedFile extends ExistingFile
      *
      * @param null|string $fileName file name or null if the current file name is checked
      *
-     * @return bool `true` if extensions are allowed for the current resource type
+     * @return bool `true` if extensions are allowed for the current resources type
      */
     protected function areValidDoubleExtensions($fileName = null)
     {

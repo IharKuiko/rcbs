@@ -69,11 +69,11 @@ interface KernelInterface extends HttpKernelInterface
     public function getBundle(string $name);
 
     /**
-     * Returns the file path for a given bundle resource.
+     * Returns the file path for a given bundle resources.
      *
      * A Resource can be a file or a directory.
      *
-     * The resource name must follow the following pattern:
+     * The resources name must follow the following pattern:
      *
      *     "@BundleName/path/to/a/file.something"
      *

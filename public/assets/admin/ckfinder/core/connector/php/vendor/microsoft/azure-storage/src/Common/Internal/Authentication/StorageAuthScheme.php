@@ -83,7 +83,7 @@ abstract class StorageAuthScheme implements IAuthScheme
             // Convert header to lower case.
             $header = strtolower($header);
 
-            // Retrieve all headers for the resource that begin with x-ms-,
+            // Retrieve all headers for the resources that begin with x-ms-,
             // including the x-ms-date header.
             if (Utilities::startsWith($header, $validPrefix)) {
                 // Unfold the string by replacing any breaking white space
@@ -126,10 +126,10 @@ abstract class StorageAuthScheme implements IAuthScheme
         $queryParams = array_change_key_case($queryParams);
 
         // 1. Beginning with an empty string (""), append a forward slash (/),
-        //    followed by the name of the account that owns the accessed resource.
+        //    followed by the name of the account that owns the accessed resources.
         $canonicalizedResource = '/' . $this->accountName;
 
-        // 2. Append the resource's encoded URI path, without any query parameters.
+        // 2. Append the resources's encoded URI path, without any query parameters.
         $canonicalizedResource .= parse_url($url, PHP_URL_PATH);
 
         // 3. The query string should include the question mark and the comp
@@ -159,13 +159,13 @@ abstract class StorageAuthScheme implements IAuthScheme
         $queryParams = array_change_key_case($queryParams);
 
         // 1. Beginning with an empty string (""), append a forward slash (/),
-        //    followed by the name of the account that owns the accessed resource.
+        //    followed by the name of the account that owns the accessed resources.
         $canonicalizedResource = '/' . $this->accountName;
 
-        // 2. Append the resource's encoded URI path, without any query parameters.
+        // 2. Append the resources's encoded URI path, without any query parameters.
         $canonicalizedResource .= parse_url($url, PHP_URL_PATH);
 
-        // 3. Retrieve all query parameters on the resource URI, including the comp
+        // 3. Retrieve all query parameters on the resources URI, including the comp
         //    parameter if it exists.
         // 4. Sort the query parameters lexicographically by parameter name, in
         //    ascending order.

@@ -33,7 +33,7 @@ class DeleteFolder extends CommandAbstract
     {
         // The root folder cannot be deleted.
         if ('/' === $workingFolder->getClientCurrentFolder()) {
-            throw new InvalidRequestException('Cannot delete resource type root folder');
+            throw new InvalidRequestException('Cannot delete resources type root folder');
         }
 
         $deleteFolderEvent = new DeleteFolderEvent($this->app, $workingFolder);

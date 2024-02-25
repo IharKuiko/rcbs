@@ -644,9 +644,9 @@ class Image
     }
 
     /**
-     * Returns GD image resource.
+     * Returns GD image resources.
      *
-     * @return resource GD image resource
+     * @return resources GD image resources
      */
     public function getGDImage()
     {

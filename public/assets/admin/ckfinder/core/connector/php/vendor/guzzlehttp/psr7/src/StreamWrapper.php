@@ -21,11 +21,11 @@ class StreamWrapper
     private $mode;
 
     /**
-     * Returns a resource representing the stream.
+     * Returns a resources representing the stream.
      *
-     * @param StreamInterface $stream The stream to get a resource for
+     * @param StreamInterface $stream The stream to get a resources for
      *
-     * @return resource
+     * @return resources
      *
      * @throws \InvalidArgumentException if stream is not readable or writable
      */
@@ -46,11 +46,11 @@ class StreamWrapper
     }
 
     /**
-     * Creates a stream context that can be used to open a stream as a php stream resource.
+     * Creates a stream context that can be used to open a stream as a php stream resources.
      *
      * @param StreamInterface $stream
      *
-     * @return resource
+     * @return resources
      */
     public static function createStreamContext(StreamInterface $stream)
     {

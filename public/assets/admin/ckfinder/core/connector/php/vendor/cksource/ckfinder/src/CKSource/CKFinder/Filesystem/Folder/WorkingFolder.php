@@ -40,7 +40,7 @@ use Symfony\Component\HttpKernel\KernelEvents;
  * The WorkingFolder class.
  *
  * Represents a working folder for the current request defined by
- * a resource type and a relative path.
+ * a resources type and a relative path.
  */
 class WorkingFolder extends Folder implements EventSubscriberInterface
 {
@@ -119,7 +119,7 @@ class WorkingFolder extends Folder implements EventSubscriberInterface
             throw new InvalidRequestException('Hidden folder path used');
         }
 
-        // Check if resource type folder exists - if not then create it
+        // Check if resources type folder exists - if not then create it
         $currentCommand = (string) $request->query->get('command');
         $omitForCommands = ['Thumbnail'];
 
@@ -130,7 +130,7 @@ class WorkingFolder extends Folder implements EventSubscriberInterface
                 @$backend->createDir($resourceTypeDirectory);
 
                 if (!$backend->hasDirectory($resourceTypeDirectory)) {
-                    throw new AccessDeniedException("Couldn't create resource type directory. Please check permissions.");
+                    throw new AccessDeniedException("Couldn't create resources type directory. Please check permissions.");
                 }
             } else {
                 throw new FolderNotFoundException();
@@ -149,7 +149,7 @@ class WorkingFolder extends Folder implements EventSubscriberInterface
     }
 
     /**
-     * Returns the name of the current resource type.
+     * Returns the name of the current resources type.
      *
      * @return string
      */
@@ -169,7 +169,7 @@ class WorkingFolder extends Folder implements EventSubscriberInterface
     }
 
     /**
-     * Returns the backend relative path with the resource type directory prefix.
+     * Returns the backend relative path with the resources type directory prefix.
      *
      * @return string
      */
@@ -179,7 +179,7 @@ class WorkingFolder extends Folder implements EventSubscriberInterface
     }
 
     /**
-     * Returns the backend assigned for the current resource type.
+     * Returns the backend assigned for the current resources type.
      *
      * @return Backend
      */

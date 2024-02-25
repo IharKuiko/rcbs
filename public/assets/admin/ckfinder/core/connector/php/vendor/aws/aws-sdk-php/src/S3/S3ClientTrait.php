@@ -274,9 +274,9 @@ trait S3ClientTrait
     }
 
     /**
-     * Determines whether or not a resource exists using a command
+     * Determines whether or not a resources exists using a command
      *
-     * @param CommandInterface $command Command used to poll for the resource
+     * @param CommandInterface $command Command used to poll for the resources
      *
      * @return bool
      * @throws S3Exception|\Exception if there is an unhandled exception

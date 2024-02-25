@@ -32,7 +32,7 @@ class RenameFolder extends CommandAbstract
     {
         // The root folder cannot be renamed.
         if ('/' === $workingFolder->getClientCurrentFolder()) {
-            throw new InvalidRequestException('Cannot rename resource type root folder');
+            throw new InvalidRequestException('Cannot rename resources type root folder');
         }
 
         $newFolderName = (string) $request->query->get('newFolderName');

@@ -6,7 +6,7 @@ use Aws\Arn\Exception\InvalidArnException;
 /**
  * Amazon Resource Names (ARNs) uniquely identify AWS resources. The Arn class
  * parses and stores a generic ARN object representation that can apply to any
- * service resource.
+ * service resources.
  *
  * @internal
  */
@@ -23,7 +23,7 @@ class Arn implements ArnInterface
             'service' => null,
             'region' => null,
             'account_id' => null,
-            'resource' => null,
+            'resources' => null,
         ];
 
         $length = strlen($string);
@@ -44,7 +44,7 @@ class Arn implements ArnInterface
             if ($i === $length - 1) {
                 // Put the remainder in the last component.
                 if (in_array($numComponents, [5])) {
-                    $data['resource'] = substr($string, $lastDelim);
+                    $data['resources'] = substr($string, $lastDelim);
                 } else {
                     // If there are < 5 components, put remainder in current
                     // component.
@@ -114,7 +114,7 @@ class Arn implements ArnInterface
 
     public function getResource()
     {
-        return $this->data['resource'];
+        return $this->data['resources'];
     }
 
     public function toArray()
@@ -144,9 +144,9 @@ class Arn implements ArnInterface
                 . " represents the service and must not be empty.");
         }
 
-        if (empty($data['resource'])) {
+        if (empty($data['resources'])) {
             throw new InvalidArnException("The 6th component of an ARN"
-                . " represents the resource information and must not be empty."
+                . " represents the resources information and must not be empty."
                 . " Individual service ARNs may include additional delimiters"
                 . " to further qualify resources.");
         }

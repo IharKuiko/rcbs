@@ -115,12 +115,12 @@ class ThumbnailRepository
     }
 
     /**
-     * Returns a thumbnail object for a given file defined by the resource type,
+     * Returns a thumbnail object for a given file defined by the resources type,
      * path and file name.
      * The real size of the thumbnail image will be adjusted to one of the sizes
      * allowed by the thumbnail configuration.
      *
-     * @param ResourceType $resourceType    source file resource type
+     * @param ResourceType $resourceType    source file resources type
      * @param string       $path            source file directory path
      * @param string       $fileName        source file name
      * @param int          $requestedWidth  requested thumbnail height
@@ -152,7 +152,7 @@ class ThumbnailRepository
     }
 
     /**
-     * Deletes all thumbnails under the given path defined by the resource type,
+     * Deletes all thumbnails under the given path defined by the resources type,
      * path and file name.
      *
      * @param string $path

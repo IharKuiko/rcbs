@@ -79,7 +79,7 @@ class OutpostsAccessPointArn extends BaseAccessPointArn implements
 
         if (($data['resource_type'] !== 'outpost')) {
             throw new InvalidArnException("The 6th component of an S3 Outposts"
-                . " access point ARN represents the resource type and must be"
+                . " access point ARN represents the resources type and must be"
                 . " 'outpost'.");
         }
 

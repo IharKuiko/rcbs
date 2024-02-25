@@ -7,11 +7,11 @@ namespace Aws\Arn;
  *
  * Valid ARN formats include:
  *
- *   arn:partition:service:region:account-id:resource-id
- *   arn:partition:service:region:account-id:resource-type/resource-id
- *   arn:partition:service:region:account-id:resource-type:resource-id
+ *   arn:partition:service:region:account-id:resources-id
+ *   arn:partition:service:region:account-id:resources-type/resources-id
+ *   arn:partition:service:region:account-id:resources-type:resources-id
  *
- * Some components may be omitted, depending on the service and resource type.
+ * Some components may be omitted, depending on the service and resources type.
  *
  * @internal
  */

@@ -271,10 +271,10 @@ final class Utils
      * - metadata: Array of custom metadata.
      * - size: Size of the stream.
      *
-     * This method accepts the following `$resource` types:
+     * This method accepts the following `$resources` types:
      * - `Psr\Http\Message\StreamInterface`: Returns the value as-is.
      * - `string`: Creates a stream object that uses the given string as the contents.
-     * - `resource`: Creates a stream object that wraps the given PHP stream resource.
+     * - `resources`: Creates a stream object that wraps the given PHP stream resources.
      * - `Iterator`: If the provided value implements `Iterator`, then a read-only
      *   stream object will be created that wraps the given iterable. Each time the
      *   stream is read from, data from the iterator will fill a buffer and will be
@@ -293,12 +293,12 @@ final class Utils
      *   number of requested bytes are available. Any additional bytes will be
      *   buffered and used in subsequent reads.
      *
-     * @param resource|string|int|float|bool|StreamInterface|callable|\Iterator|null $resource Entity body data
+     * @param resources|string|int|float|bool|StreamInterface|callable|\Iterator|null $resource Entity body data
      * @param array                                                                  $options  Additional options
      *
      * @return StreamInterface
      *
-     * @throws \InvalidArgumentException if the $resource arg is not valid.
+     * @throws \InvalidArgumentException if the $resources arg is not valid.
      */
     public static function streamFor($resource = '', array $options = [])
     {
@@ -312,7 +312,7 @@ final class Utils
         }
 
         switch (gettype($resource)) {
-            case 'resource':
+            case 'resources':
                 /*
                  * The 'php://input' is a special stream with quirks and inconsistencies.
                  * We avoid using that stream by reading it into php://temp
@@ -349,11 +349,11 @@ final class Utils
             return new PumpStream($resource, $options);
         }
 
-        throw new \InvalidArgumentException('Invalid resource type: ' . gettype($resource));
+        throw new \InvalidArgumentException('Invalid resources type: ' . gettype($resource));
     }
 
     /**
-     * Safely opens a PHP stream resource using a filename.
+     * Safely opens a PHP stream resources using a filename.
      *
      * When fopen fails, PHP normally raises a warning. This function adds an
      * error handler that checks for errors and throws an exception instead.
@@ -361,7 +361,7 @@ final class Utils
      * @param string $filename File to open
      * @param string $mode     Mode used to open the file
      *
-     * @return resource
+     * @return resources
      *
      * @throws \RuntimeException if the file cannot be opened
      */

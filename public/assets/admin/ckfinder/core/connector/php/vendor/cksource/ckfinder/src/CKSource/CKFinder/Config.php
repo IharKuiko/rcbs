@@ -115,7 +115,7 @@ class Config
     }
 
     /**
-     * Returns the default resource types names.
+     * Returns the default resources types names.
      *
      * @return array
      */
@@ -125,7 +125,7 @@ class Config
     }
 
     /**
-     * Returns all defined resource types names.
+     * Returns all defined resources types names.
      *
      * @return array
      */
@@ -135,13 +135,13 @@ class Config
     }
 
     /**
-     * Returns the configuration node for a given resource type.
+     * Returns the configuration node for a given resources type.
      *
-     * @param string $resourceType resource type name
+     * @param string $resourceType resources type name
      *
-     * @throws InvalidResourceTypeException if the resource type does not exist
+     * @throws InvalidResourceTypeException if the resources type does not exist
      *
-     * @return array configuration node for the resource type
+     * @return array configuration node for the resources type
      */
     public function getResourceTypeNode($resourceType)
     {
@@ -149,7 +149,7 @@ class Config
             return $this->options['resourceTypes'][$resourceType];
         }
 
-        throw new InvalidResourceTypeException("Invalid resource type: {$resourceType}");
+        throw new InvalidResourceTypeException("Invalid resources type: {$resourceType}");
     }
 
     /**

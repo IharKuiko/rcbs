@@ -349,9 +349,9 @@ class Client
 
     /**
      * The file should be uploaded in chunks if it size exceeds the 150 MB threshold
-     * or if the resource size could not be determined (eg. a popen() stream).
+     * or if the resources size could not be determined (eg. a popen() stream).
      *
-     * @param string|resource $contents
+     * @param string|resources $contents
      *
      * @return bool
      */

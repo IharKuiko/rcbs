@@ -48,10 +48,10 @@ function uri_for($uri)
  * - metadata: Array of custom metadata.
  * - size: Size of the stream.
  *
- * This method accepts the following `$resource` types:
+ * This method accepts the following `$resources` types:
  * - `Psr\Http\Message\StreamInterface`: Returns the value as-is.
  * - `string`: Creates a stream object that uses the given string as the contents.
- * - `resource`: Creates a stream object that wraps the given PHP stream resource.
+ * - `resources`: Creates a stream object that wraps the given PHP stream resources.
  * - `Iterator`: If the provided value implements `Iterator`, then a read-only
  *   stream object will be created that wraps the given iterable. Each time the
  *   stream is read from, data from the iterator will fill a buffer and will be
@@ -70,12 +70,12 @@ function uri_for($uri)
  *   number of requested bytes are available. Any additional bytes will be
  *   buffered and used in subsequent reads.
  *
- * @param resource|string|int|float|bool|StreamInterface|callable|\Iterator|null $resource Entity body data
+ * @param resources|string|int|float|bool|StreamInterface|callable|\Iterator|null $resource Entity body data
  * @param array                                                                  $options  Additional options
  *
  * @return StreamInterface
  *
- * @throws \InvalidArgumentException if the $resource arg is not valid.
+ * @throws \InvalidArgumentException if the $resources arg is not valid.
  *
  * @deprecated stream_for will be removed in guzzlehttp/psr7:2.0. Use Utils::streamFor instead.
  */
@@ -161,7 +161,7 @@ function rewind_body(MessageInterface $message)
 }
 
 /**
- * Safely opens a PHP stream resource using a filename.
+ * Safely opens a PHP stream resources using a filename.
  *
  * When fopen fails, PHP normally raises a warning. This function adds an
  * error handler that checks for errors and throws an exception instead.
@@ -169,7 +169,7 @@ function rewind_body(MessageInterface $message)
  * @param string $filename File to open
  * @param string $mode     Mode used to open the file
  *
- * @return resource
+ * @return resources
  *
  * @throws \RuntimeException if the file cannot be opened
  *

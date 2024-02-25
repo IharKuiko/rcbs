@@ -38,7 +38,7 @@ class ClientResolver
 
     /** @var array Map of types to a corresponding function */
     private static $typeMap = [
-        'resource' => 'is_resource',
+        'resources' => 'is_resource',
         'callable' => 'is_callable',
         'int'      => 'is_int',
         'bool'     => 'is_bool',

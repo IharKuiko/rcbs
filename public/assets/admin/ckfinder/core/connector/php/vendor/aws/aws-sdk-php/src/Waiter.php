@@ -7,8 +7,8 @@ use GuzzleHttp\Promise\PromisorInterface;
 use GuzzleHttp\Promise\RejectedPromise;
 
 /**
- * "Waiters" are associated with an AWS resource (e.g., EC2 instance), and poll
- * that resource and until it is in a particular state.
+ * "Waiters" are associated with an AWS resources (e.g., EC2 instance), and poll
+ * that resources and until it is in a particular state.
 
  * The Waiter object produces a promise that is either a.) resolved once the
  * waiting conditions are met, or b.) rejected if the waiting conditions cannot
@@ -155,7 +155,7 @@ class Waiter implements PromisorInterface
 
     /**
      * Determines the state of the waiter attempt, based on the result of
-     * polling the resource. A waiter can have the state of "success", "failed",
+     * polling the resources. A waiter can have the state of "success", "failed",
      * or "retry".
      *
      * @param mixed $result

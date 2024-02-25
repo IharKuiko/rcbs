@@ -104,10 +104,10 @@ class Backend extends Filesystem
     }
 
     /**
-     * Returns a path based on the resource type and the resource type relative path.
+     * Returns a path based on the resources type and the resources type relative path.
      *
-     * @param ResourceType $resourceType the resource type
-     * @param string       $path         the resource type relative path
+     * @param ResourceType $resourceType the resources type
+     * @param string       $path         the resources type relative path
      *
      * @return string path to be used with the backend adapter
      */
@@ -117,7 +117,7 @@ class Backend extends Filesystem
     }
 
     /**
-     * Returns a filtered list of directories for a given resource type and path.
+     * Returns a filtered list of directories for a given resources type and path.
      *
      * @param string $path
      * @param bool   $recursive
@@ -142,7 +142,7 @@ class Backend extends Filesystem
     }
 
     /**
-     * Returns a filtered list of files for a given resource type and path.
+     * Returns a filtered list of files for a given resources type and path.
      *
      * @param string $path
      * @param bool   $recursive
@@ -179,7 +179,7 @@ class Backend extends Filesystem
         $directoryPath = $this->buildPath($resourceType, $path);
 
         // It's possible that directory may not exist yet. This is the case when very first Init command
-        // is received, and resource type directories were not created yet. Some adapters will throw in
+        // is received, and resources type directories were not created yet. Some adapters will throw in
         // this case, so handle this gracefully.
         try {
             $contents = $this->listContents($directoryPath);
@@ -329,8 +329,8 @@ class Backend extends Filesystem
      * If the useProxyCommand option is set for a backend, the returned
      * URL will point to the CKFinder connector Proxy command.
      *
-     * @param ResourceType $resourceType      the file resource type
-     * @param string       $folderPath        the resource-type relative folder path
+     * @param ResourceType $resourceType      the file resources type
+     * @param string       $folderPath        the resources-type relative folder path
      * @param string       $fileName          the file name
      * @param null|string  $thumbnailFileName the thumbnail file name - if the file is a thumbnail
      *

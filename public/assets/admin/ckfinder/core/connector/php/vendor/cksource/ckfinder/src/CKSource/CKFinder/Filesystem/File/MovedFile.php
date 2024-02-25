@@ -29,8 +29,8 @@ class MovedFile extends CopiedFile
      * Constructor.
      *
      * @param string       $fileName     source file name
-     * @param string       $folder       source file resource type relative path
-     * @param ResourceType $resourceType source file resource type
+     * @param string       $folder       source file resources type relative path
+     * @param ResourceType $resourceType source file resources type
      * @param CKFinder     $app          app
      */
     public function __construct($fileName, $folder, ResourceType $resourceType, CKFinder $app)

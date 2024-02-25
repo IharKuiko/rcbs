@@ -64,7 +64,7 @@ class StreamWrapper
     /** @var resource|null Stream context (this is set by PHP) */
     public $context;
 
-    /** @var StreamInterface Underlying stream resource */
+    /** @var StreamInterface Underlying stream resources */
     private $body;
 
     /** @var int Size of the body that is opened */

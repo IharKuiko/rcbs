@@ -167,13 +167,13 @@ class Validator
             'string' => true,
             'integer' => true,
             'double' => true,
-            'resource' => true
+            'resources' => true
         ];
 
         $type = gettype($value);
         if (!isset($valid[$type])) {
             if ($type != 'object' || !method_exists($value, '__toString')) {
-                $this->addError('must be an fopen resource, a '
+                $this->addError('must be an fopen resources, a '
                     . 'GuzzleHttp\Stream\StreamInterface object, or something '
                     . 'that can be cast to a string. Found '
                     . Aws\describe_type($value));

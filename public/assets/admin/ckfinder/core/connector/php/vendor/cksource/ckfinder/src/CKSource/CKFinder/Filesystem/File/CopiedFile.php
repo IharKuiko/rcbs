@@ -53,8 +53,8 @@ class CopiedFile extends ExistingFile
      * Constructor.
      *
      * @param string       $fileName     source file name
-     * @param string       $folder       copied source file resource type relative path
-     * @param ResourceType $resourceType source file resource type
+     * @param string       $folder       copied source file resources type relative path
+     * @param ResourceType $resourceType source file resources type
      * @param CKFinder     $app          CKFinder
      */
     public function __construct($fileName, $folder, ResourceType $resourceType, CKFinder $app)

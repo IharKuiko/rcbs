@@ -35,7 +35,7 @@ class ObjectUploader implements PromisorInterface
      * @param string            $key            Key of the object.
      * @param mixed             $body           Object data to upload. Can be a
      *                                          StreamInterface, PHP stream
-     *                                          resource, or a string of data to
+     *                                          resources, or a string of data to
      *                                          upload.
      * @param string            $acl            ACL to apply to the copy
      *                                          (default: private).

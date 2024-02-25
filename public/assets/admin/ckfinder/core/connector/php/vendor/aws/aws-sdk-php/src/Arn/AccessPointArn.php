@@ -46,20 +46,20 @@ class AccessPointArn extends Arn implements AccessPointArnInterface
 
         if ($data['resource_type'] !== 'accesspoint') {
             throw new InvalidArnException("The 6th component of an access point ARN"
-                . " represents the resource type and must be 'accesspoint'.");
+                . " represents the resources type and must be 'accesspoint'.");
         }
 
         if (empty($data['resource_id'])) {
             throw new InvalidArnException("The 7th component of an access point ARN"
-                . " represents the resource ID and must not be empty.");
+                . " represents the resources ID and must not be empty.");
         }
         if (strpos($data['resource_id'], ':') !== false) {
-            throw new InvalidArnException("The resource ID component of an access"
+            throw new InvalidArnException("The resources ID component of an access"
                 . " point ARN must not contain additional components"
                 . " (delimited by ':').");
         }
         if (!self::isValidHostLabel($data['resource_id'])) {
-            throw new InvalidArnException("The resource ID in an access point ARN"
+            throw new InvalidArnException("The resources ID in an access point ARN"
                 . " must be a valid host label value.");
         }
     }

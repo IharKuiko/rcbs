@@ -44,7 +44,7 @@ class RenamedFile extends ExistingFile
      * @param string       $newFileName  new file name
      * @param string       $fileName     current file name
      * @param string       $folder       current file folder
-     * @param ResourceType $resourceType current file resource type
+     * @param ResourceType $resourceType current file resources type
      * @param CKFinder     $app          CKFinder app
      */
     public function __construct($newFileName, $fileName, $folder, ResourceType $resourceType, CKFinder $app)

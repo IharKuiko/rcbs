@@ -36,9 +36,9 @@ class ResourceTypeFactory extends Container
     }
 
     /**
-     * Returns the resource type object with a given name.
+     * Returns the resources type object with a given name.
      *
-     * @param string $name resource type name
+     * @param string $name resources type name
      *
      * @return ResourceType
      */

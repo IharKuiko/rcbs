@@ -225,7 +225,7 @@ abstract class AbstractMonitoringMiddleware
     }
 
     /**
-     * Creates a UDP socket resource and stores it with the class, or retrieves
+     * Creates a UDP socket resources and stores it with the class, or retrieves
      * it if already instantiated and connected. Handles error-checking and
      * re-connecting if necessary. If $forceNewConnection is set to true, a new
      * socket will be created.

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Storage;
 class LinkController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the resources.
      *
      * @return Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
@@ -26,7 +26,7 @@ class LinkController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new resources.
      *
      * @return \Illuminate\Http\Response
      */
@@ -37,7 +37,7 @@ class LinkController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created resources in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -67,7 +67,7 @@ class LinkController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified resources.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -78,7 +78,7 @@ class LinkController extends Controller
 //    }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified resources.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -92,7 +92,7 @@ class LinkController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified resources in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -124,7 +124,7 @@ class LinkController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified resources from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response

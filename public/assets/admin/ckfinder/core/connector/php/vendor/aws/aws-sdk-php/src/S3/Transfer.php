@@ -58,7 +58,7 @@ class Transfer implements PromisorInterface
      *   smaller files benefit from a higher concurrency while larger files
      *   will not.
      * - debug: (bool) Set to true to print out debug information for
-     *   transfers. Set to an fopen() resource to write to a specific stream
+     *   transfers. Set to an fopen() resources to write to a specific stream
      *   rather than writing to STDOUT.
      *
      * @param S3ClientInterface $client  Client used for transfers.
@@ -356,7 +356,7 @@ class Transfer implements PromisorInterface
         $args = $this->s3Args;
         $args['Key'] = $this->createS3Key($filename);
         $filename = $filename instanceof \SplFileInfo ? $filename->getPathname() : $filename;
-        
+
         return (new MultipartUploader($this->client, $filename, [
             'bucket'          => $args['Bucket'],
             'key'             => $args['Key'],

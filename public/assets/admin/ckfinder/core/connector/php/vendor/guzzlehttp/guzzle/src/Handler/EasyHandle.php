@@ -13,7 +13,7 @@ use Psr\Http\Message\StreamInterface;
  */
 final class EasyHandle
 {
-    /** @var resource cURL resource */
+    /** @var resources cURL resources */
     public $handle;
 
     /** @var StreamInterface Where data is being written */

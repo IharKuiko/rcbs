@@ -10,16 +10,16 @@ use Illuminate\Http\Request;
 class LinkCategoryController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the resources.
      */
     public function index()
     {
-        $categories = LinkCategory::paginate(2);
+        $categories = LinkCategory::paginate(20);
         return view('admin.link_categories.index', compact('categories'));
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new resources.
      */
     public function create()
     {
@@ -27,7 +27,7 @@ class LinkCategoryController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created resources in storage.
      */
     public function store(Request $request)
     {
@@ -39,7 +39,7 @@ class LinkCategoryController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified resources.
      */
     public function show(string $id)
     {
@@ -47,7 +47,7 @@ class LinkCategoryController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified resources.
      */
     public function edit(string $id)
     {
@@ -56,7 +56,7 @@ class LinkCategoryController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified resources in storage.
      */
     public function update(Request $request, string $id)
     {
@@ -69,7 +69,7 @@ class LinkCategoryController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified resources from storage.
      */
     public function destroy(string $id)
     {

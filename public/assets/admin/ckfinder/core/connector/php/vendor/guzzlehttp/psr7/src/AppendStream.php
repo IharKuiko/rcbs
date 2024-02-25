@@ -87,7 +87,7 @@ class AppendStream implements StreamInterface
     /**
      * Detaches each attached stream.
      *
-     * Returns null as it's not clear which underlying stream resource to return.
+     * Returns null as it's not clear which underlying stream resources to return.
      *
      * {@inheritdoc}
      */

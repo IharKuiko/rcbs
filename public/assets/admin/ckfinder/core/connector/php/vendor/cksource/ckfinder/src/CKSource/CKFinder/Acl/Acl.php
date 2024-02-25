@@ -237,7 +237,7 @@ class Acl implements AclInterface
      * Merges permission masks to allow permission inheritance from parent folders.
      *
      * @param int    $currentMask  the current mask numeric value
-     * @param string $resourceType the resource type identifier
+     * @param string $resourceType the resources type identifier
      * @param string $role         the user role name
      * @param string $folderPath   the folder path
      *

@@ -131,7 +131,7 @@ interface S3ClientInterface extends AwsClientInterface
      * @param string $bucket  Bucket to upload the object.
      * @param string $key     Key of the object.
      * @param mixed  $body    Object data to upload. Can be a
-     *                        StreamInterface, PHP stream resource, or a
+     *                        StreamInterface, PHP stream resources, or a
      *                        string of data to upload.
      * @param string $acl     ACL to apply to the object (default: private).
      * @param array  $options Options used to configure the upload process.
@@ -153,7 +153,7 @@ interface S3ClientInterface extends AwsClientInterface
      * @param string $bucket  Bucket to upload the object.
      * @param string $key     Key of the object.
      * @param mixed  $body    Object data to upload. Can be a
-     *                        StreamInterface, PHP stream resource, or a
+     *                        StreamInterface, PHP stream resources, or a
      *                        string of data to upload.
      * @param string $acl     ACL to apply to the object (default: private).
      * @param array  $options Options used to configure the upload process.

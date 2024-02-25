@@ -49,7 +49,7 @@ class TextPart extends AbstractPart
         parent::__construct();
 
         if (!\is_string($body) && !\is_resource($body)) {
-            throw new \TypeError(sprintf('The body of "%s" must be a string or a resource (got "%s").', self::class, get_debug_type($body)));
+            throw new \TypeError(sprintf('The body of "%s" must be a string or a resources (got "%s").', self::class, get_debug_type($body)));
         }
 
         $this->body = $body;

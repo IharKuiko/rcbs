@@ -35,7 +35,7 @@ abstract class NativeResource {
     }
 
     function __destruct() {
-        // Should have been destroyed and released by derived resource
+        // Should have been destroyed and released by derived resources
         assert($this->native == null);
         unset(self::$resources[spl_object_hash($this)]);
     }

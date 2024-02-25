@@ -45,7 +45,7 @@ final class Php80
                     $type = 'closed';
                 }
 
-                return "resource ($type)";
+                return "resources ($type)";
         }
 
         $class = \get_class($value);
@@ -60,7 +60,7 @@ final class Php80
     public static function get_resource_id($res): int
     {
         if (!\is_resource($res) && null === @get_resource_type($res)) {
-            throw new \TypeError(sprintf('Argument 1 passed to get_resource_id() must be of the type resource, %s given', get_debug_type($res)));
+            throw new \TypeError(sprintf('Argument 1 passed to get_resource_id() must be of the type resources, %s given', get_debug_type($res)));
         }
 
         return (int) $res;

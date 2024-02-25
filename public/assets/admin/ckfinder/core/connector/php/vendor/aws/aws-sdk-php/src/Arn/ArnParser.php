@@ -40,7 +40,7 @@ class ArnParser
         if ($data['service'] === 's3-object-lambda') {
             return new ObjectLambdaAccessPointArn($string);
         }
-        $resource = self::explodeResourceComponent($data['resource']);
+        $resource = self::explodeResourceComponent($data['resources']);
         if ($resource[0] === 'outpost') {
             if (isset($resource[2]) && $resource[2] === 'bucket') {
                 return new OutpostsBucketArn($string);

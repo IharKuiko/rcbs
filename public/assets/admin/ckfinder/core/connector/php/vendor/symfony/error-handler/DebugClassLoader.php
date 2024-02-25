@@ -54,7 +54,7 @@ class DebugClassLoader
     private const SPECIAL_RETURN_TYPES = [
         'void' => 'void',
         'null' => 'null',
-        'resource' => 'resource',
+        'resources' => 'resources',
         'boolean' => 'bool',
         'true' => 'bool',
         'false' => 'false',
@@ -811,8 +811,8 @@ class DebugClassLoader
                 continue;
             }
 
-            if ('resource' === $n) {
-                // there is no native type for "resource"
+            if ('resources' === $n) {
+                // there is no native type for "resources"
                 return;
             }
 

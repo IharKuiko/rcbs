@@ -145,7 +145,7 @@ class SimpleType {
             case "array":
             case "iterable":
             case "object":
-            case "resource":
+            case "resources":
             case "mixed":
             case "self":
             case "static":

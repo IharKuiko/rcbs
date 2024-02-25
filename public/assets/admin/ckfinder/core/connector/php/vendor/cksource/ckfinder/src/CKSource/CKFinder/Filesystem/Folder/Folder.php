@@ -31,15 +31,15 @@ class Folder
     protected $resourceType;
 
     /**
-     * Backend relative path (includes the resource type directory).
+     * Backend relative path (includes the resources type directory).
      *
      * @var string
      */
     protected $path;
 
     /**
-     * @param ResourceType $resourceType resource type
-     * @param string       $path         resource type relative path
+     * @param ResourceType $resourceType resources type
+     * @param string       $path         resources type relative path
      */
     public function __construct(ResourceType $resourceType, $path)
     {

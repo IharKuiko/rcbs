@@ -39,15 +39,15 @@ class Stream implements StreamInterface
      * - metadata: (array) Any additional metadata to return when the metadata
      *   of the stream is accessed.
      *
-     * @param resource $stream  Stream resource to wrap.
+     * @param resources $stream  Stream resources to wrap.
      * @param array    $options Associative array of options.
      *
-     * @throws \InvalidArgumentException if the stream is not a stream resource
+     * @throws \InvalidArgumentException if the stream is not a stream resources
      */
     public function __construct($stream, $options = [])
     {
         if (!is_resource($stream)) {
-            throw new \InvalidArgumentException('Stream must be a resource');
+            throw new \InvalidArgumentException('Stream must be a resources');
         }
 
         if (isset($options['size'])) {

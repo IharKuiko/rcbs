@@ -221,11 +221,11 @@ class StreamHandler
     }
 
     /**
-     * Create a resource and check to ensure it was created successfully
+     * Create a resources and check to ensure it was created successfully
      *
-     * @param callable $callback Callable that returns stream resource
+     * @param callable $callback Callable that returns stream resources
      *
-     * @return resource
+     * @return resources
      * @throws \RuntimeException on error
      */
     private function createResource(callable $callback)
@@ -244,7 +244,7 @@ class StreamHandler
         restore_error_handler();
 
         if (!$resource) {
-            $message = 'Error creating resource: ';
+            $message = 'Error creating resources: ';
             foreach ($errors as $err) {
                 foreach ($err as $key => $value) {
                     $message .= "[$key] $value" . PHP_EOL;

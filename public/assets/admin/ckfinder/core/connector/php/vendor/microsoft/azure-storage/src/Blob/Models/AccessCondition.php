@@ -11,7 +11,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
+ *
  * PHP version 5
  *
  * @category  Microsoft
@@ -21,14 +21,14 @@
  * @license   https://github.com/azure/azure-storage-php/LICENSE
  * @link      https://github.com/azure/azure-storage-php
  */
- 
+
 namespace MicrosoftAzure\Storage\Blob\Models;
 use MicrosoftAzure\Storage\Common\Internal\Resources;
 use MicrosoftAzure\Storage\Common\Internal\Validate;
 use MicrosoftAzure\Storage\Common\Internal\WindowsAzureUtilities;
 
 /**
- * Represents a set of access conditions to be used for operations against the 
+ * Represents a set of access conditions to be used for operations against the
  * storage services.
  *
  * @category  Microsoft
@@ -43,21 +43,21 @@ class AccessCondition
 {
     /**
      * Represents the header type.
-     * 
+     *
      * @var string
      */
     private $_header = Resources::EMPTY_STRING;
-    
+
     /**
      * Represents the header value.
-     * 
+     *
      * @var string
      */
     private $_value;
 
     /**
      * Constructor
-     * 
+     *
      * @param string $headerType header name
      * @param string $value      header value
      */
@@ -66,27 +66,27 @@ class AccessCondition
         $this->setHeader($headerType);
         $this->setValue($value);
     }
-    
+
     /**
      * Specifies that no access condition is set.
-     * 
-     * @return \MicrosoftAzure\Storage\Blob\Models\AccessCondition 
+     *
+     * @return \MicrosoftAzure\Storage\Blob\Models\AccessCondition
      */
     public static function none()
     {
         return new AccessCondition(Resources::EMPTY_STRING, null);
     }
-    
+
     /**
-     * Returns an access condition such that an operation will be performed only if 
-     * the resource's ETag value matches the specified ETag value.
+     * Returns an access condition such that an operation will be performed only if
+     * the resources's ETag value matches the specified ETag value.
      * <p>
-     * Setting this access condition modifies the request to include the HTTP 
-     * <i>If-Match</i> conditional header. If this access condition is set, the 
-     * operation is performed only if the ETag of the resource matches the specified
+     * Setting this access condition modifies the request to include the HTTP
+     * <i>If-Match</i> conditional header. If this access condition is set, the
+     * operation is performed only if the ETag of the resources matches the specified
      * ETag.
      * <p>
-     * For more information, see 
+     * For more information, see
      * <a href= 'http://go.microsoft.com/fwlink/?LinkID=224642&clcid=0x409'>
      * Specifying Conditional Headers for Blob Service Operations</a>.
      *
@@ -98,22 +98,22 @@ class AccessCondition
     {
         return new AccessCondition(Resources::IF_MATCH, $etag);
     }
-    
+
     /**
-     * Returns an access condition such that an operation will be performed only if 
-     * the resource has been modified since the specified time.
+     * Returns an access condition such that an operation will be performed only if
+     * the resources has been modified since the specified time.
      * <p>
-     * Setting this access condition modifies the request to include the HTTP 
+     * Setting this access condition modifies the request to include the HTTP
      * <i>If-Modified-Since</i> conditional header. If this access condition is set,
-     * the operation is performed only if the resource has been modified since the 
+     * the operation is performed only if the resources has been modified since the
      * specified time.
      * <p>
-     * For more information, see 
+     * For more information, see
      * <a href= 'http://go.microsoft.com/fwlink/?LinkID=224642&clcid=0x409'>
      * Specifying Conditional Headers for Blob Service Operations</a>.
      *
      * @param \DateTime $lastModified date that represents the last-modified
-     * time to check for the resource.
+     * time to check for the resources.
      *
      * @return \MicrosoftAzure\Storage\Blob\Models\AccessCondition
      */
@@ -125,14 +125,14 @@ class AccessCondition
             $lastModified
         );
     }
-    
+
     /**
-     * Returns an access condition such that an operation will be performed only if 
-     * the resource's ETag value does not match the specified ETag value.
+     * Returns an access condition such that an operation will be performed only if
+     * the resources's ETag value does not match the specified ETag value.
      * <p>
-     * Setting this access condition modifies the request to include the HTTP 
+     * Setting this access condition modifies the request to include the HTTP
      * <i>If-None-Match</i> conditional header. If this access condition is set, the
-     * operation is performed only if the ETag of the resource does not match the
+     * operation is performed only if the ETag of the resources does not match the
      * specified ETag.
      * <p>
      * For more information,
@@ -147,14 +147,14 @@ class AccessCondition
     {
         return new AccessCondition(Resources::IF_NONE_MATCH, $etag);
     }
-    
+
     /**
      * Returns an access condition such that an operation will be performed only if
-     * the resource has not been modified since the specified time.
+     * the resources has not been modified since the specified time.
      * <p>
-     * Setting this access condition modifies the request to include the HTTP 
+     * Setting this access condition modifies the request to include the HTTP
      * <i>If-Unmodified-Since</i> conditional header. If this access condition is
-     * set, the operation is performed only if the resource has not been modified 
+     * set, the operation is performed only if the resources has not been modified
      * since the specified time.
      * <p>
      * For more information, see
@@ -162,7 +162,7 @@ class AccessCondition
      * Specifying Conditional Headers for Blob Service Operations</a>.
      *
      * @param \DateTime $lastModified date that represents the last-modified
-     * time to check for the resource.
+     * time to check for the resources.
      *
      * @return \MicrosoftAzure\Storage\Blob\Models\AccessCondition
      */
@@ -174,60 +174,60 @@ class AccessCondition
             $lastModified
         );
     }
-    
+
     /**
      * Sets header type
-     * 
+     *
      * @param string $headerType can be one of Resources
-     * 
+     *
      * @return none.
      */
     public function setHeader($headerType)
     {
         $valid = AccessCondition::isValid($headerType);
         Validate::isTrue($valid, Resources::INVALID_HT_MSG);
-        
+
         $this->_header = $headerType;
     }
-    
+
     /**
      * Gets header type
-     * 
+     *
      * @return string.
      */
     public function getHeader()
     {
         return $this->_header;
     }
-    
+
     /**
      * Sets the header value
-     * 
+     *
      * @param string $value the value to use
-     * 
+     *
      * @return none
      */
     public function setValue($value)
     {
         $this->_value = $value;
     }
-    
+
     /**
      * Gets the header value
-     * 
+     *
      * @return string
      */
     public function getValue()
     {
         return $this->_value;
     }
-    
+
     /**
      * Check if the $headerType belongs to valid header types
-     * 
+     *
      * @param string $headerType candidate header type
-     * 
-     * @return boolean 
+     *
+     * @return boolean
      */
     public static function isValid($headerType)
     {

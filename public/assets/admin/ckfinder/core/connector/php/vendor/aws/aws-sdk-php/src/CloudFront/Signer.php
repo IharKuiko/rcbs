@@ -55,7 +55,7 @@ class Signer
     /**
      * Create the values used to construct signed URLs and cookies.
      *
-     * @param string              $resource     The CloudFront resource to which
+     * @param string              $resource     The CloudFront resources to which
      *                                          this signature will grant access.
      *                                          Not used when a custom policy is
      *                                          provided.
@@ -69,7 +69,7 @@ class Signer
      *
      * @return array The values needed to construct a signed URL or cookie
      * @throws \InvalidArgumentException  when not provided either a policy or a
-     *                                    resource and a expires
+     *                                    resources and a expires
      *
      * @link http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-signed-cookies.html
      */
@@ -84,7 +84,7 @@ class Signer
             $policy = $this->createCannedPolicy($resource, $expires);
             $signatureHash['Expires'] = $expires;
         } else {
-            throw new \InvalidArgumentException('Either a policy or a resource'
+            throw new \InvalidArgumentException('Either a policy or a resources'
                 . ' and an expiration time must be provided.');
         }
 

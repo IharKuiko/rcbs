@@ -76,7 +76,7 @@ class OutpostsBucketArn extends Arn implements
 
         if (($data['resource_type'] !== 'outpost')) {
             throw new InvalidArnException("The 6th component of an S3 Outposts"
-                . " bucket ARN represents the resource type and must be"
+                . " bucket ARN represents the resources type and must be"
                 . " 'outpost'.");
         }
 
