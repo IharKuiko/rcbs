@@ -1,6 +1,11 @@
+/*@import 'swiper/css/bundle';*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*@import '/node_modules/swiper/swiper-bundle.min.css';*/
+
 
 .image img{
     margin: 0 auto;
@@ -50,3 +55,25 @@
     /*border: none;*/
     /*width: 100%;*/
 }
+
+
+/*.swiper {*/
+/*    width: 600px;*/
+/*    height: 300px;*/
+/*}*/
+
+/*.swiper-wrapper {*/
+/*    max-width: 800px;*/
+/*}*/
+
+/*.swiper {*/
+/*    width: 1260px;*/
+/*    height: 300px;*/
+/*}*/
+
+
+/*.slide-img {*/
+/*    text-align: center;*/
+/*    height: 300px;*/
+/*    margin: 0 10px;*/
+/*}*/

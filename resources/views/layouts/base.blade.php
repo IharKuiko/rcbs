@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {{--    <link rel="stylesheet" href="public/styles.css">--}}
 
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Magra:wght@400;700&family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/icon/logo.ico" type="image/x-icon">
-    <style>
 
-    </style>
 
     <title>Речицкая центральная библиотека :: @yield('title')</title>
 </head>

@@ -179,3 +179,4 @@
         <div class="text-center"><a href="#">&copy; K.I.Tech {{ date('Y') }}</a></div>
     </div>
 </footer>
+

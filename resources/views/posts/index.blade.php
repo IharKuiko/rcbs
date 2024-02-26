@@ -3,7 +3,9 @@
 @section('title', 'Главная')
 
 @section('slider')
-    @include('layouts.carousel')
+    <section class="hidden md:block">
+        @include('layouts.carousel')
+    </section>
 @endsection
 
 @section('links')
@@ -92,7 +94,7 @@
                                 <img class="rounded-lg" src="{{ $post->getImage() }}" alt="main post image">
                                 <h3 class="text-xl font-semibold uppercase m-2">{{ $post->title }}</h3>
                             </a>
-                            <div class="text-gray-500 p-2">
+                            <div class="relative text-gray-500 p-2">
 {{--                                <a href="{{ route('posts.single', ['slug' => $post->slug]) }}">--}}
 {{--                                    --}}
 {{--                                </a>--}}
